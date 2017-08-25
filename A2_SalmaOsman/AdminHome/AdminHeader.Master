@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminHeader.master.cs" Inherits="A2_SalmaOsman.AdminHeader" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style3 {
+            width: 699px;
+        }
+        .auto-style4 {
+            width: 962px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4">
+        <asp:Label ID="lblAdminHeader" runat="server" Font-Size="Large" ForeColor="#006699"></asp:Label>
+                    <br />
+                    <asp:Label ID="lblStatus" runat="server" ForeColor="#006699"></asp:Label>
+                    <br />
+                </td>
+                <td class="auto-style3">
+                    <asp:HyperLink ID="hplLogout" runat="server" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    <asp:Menu ID="mnuAdmin" runat="server">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/AdminHome/AdminHome.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SharedForm/ViewSearchVisits.aspx" Text="View/Search Visits" Value="Visits"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SharedForm/ViewSearchPatients.aspx" Text="View/Search Patients" Value="View/Search Patients"></asp:MenuItem>
+                            <asp:MenuItem Text="Add/Modify ..." Value="Add/Modify ...">
+                                <asp:MenuItem NavigateUrl="~/AdminHome/NewDoctor.aspx" Text="Doctor" Value="Doctor"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AdminHome/NewPatient.aspx" Text="Patient" Value="New Patient"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminHome/AdmitPatient.aspx" Text="Admit Patient" Value="Admit Patient"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminHome/DischargePatient.aspx" Text="Discharge Patient" Value="Discharge Patient"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+        </table>
+        <br />
+        <br />
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
